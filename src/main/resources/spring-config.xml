@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="c" class="com.joctopus.Course">
+		<property name="cid" value="1"/>
+		<property name="cname" value="Java"/>
+		<property name="fees" value="30000"/>
+	</bean>
+	<bean id="f" class="com.joctopus.Faculty">
+		<constructor-arg value="111"/>
+		<constructor-arg value="Giridhar"/>
+		<constructor-arg value="Computer Science"/>
+		<constructor-arg value="50000"/>
+	</bean>
+	
+	<bean id="e" class="com.joctopus.Employee">
+		<constructor-arg value="1234"/>
+		<constructor-arg value="Raju"/>
+		<constructor-arg ref="a"/>
+	</bean>
+	<bean id="a" class="com.joctopus.Address">
+		<constructor-arg value="143"/>
+		<constructor-arg value="Bangalore"/>
+		<constructor-arg value="KA"/>
+	</bean>
+</beans>
